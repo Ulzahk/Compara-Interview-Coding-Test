@@ -19,10 +19,9 @@ class CarInsurance {
 
   sellInEvaluator(i){
     if(this.products[i].sellIn > 0){
-        this.decreasePrice(i, 1)
+      this.decreasePrice(i, 1)
     } else {
-      this.products[i].price === 1 ?
-      this.decreasePrice(i, 1) : this.decreasePrice(i, 2)
+      this.products[i].price === 1 ? this.decreasePrice(i, 1) : this.decreasePrice(i, 2)
     }
   }
 
@@ -51,8 +50,7 @@ class FullCoverage extends CarInsurance {
     if(this.products[i].sellIn > 0) {
       this.increasePrice(i, 1)
     } else {
-      this.products[i].price === 49 ?
-      this.increasePrice(i, 1) : this.increasePrice(i, 2)
+      this.products[i].price === 49 ? this.increasePrice(i, 1) : this.increasePrice(i, 2)
     }
   }
 
@@ -97,8 +95,7 @@ class SpecialFullCoverage extends FullCoverage {
 
   sellInLessOrEqualThan10(i){
     if(this.products[i].sellIn <= 10 && this.products[i].sellIn > 5) {
-      this.products[i].price === 49 ?
-      this.increasePrice(i, 1) : this.increasePrice(i, 2)
+      this.products[i].price === 49 ? this.increasePrice(i, 1) : this.increasePrice(i, 2)
     }
   }
 
@@ -148,8 +145,7 @@ class SuperSale extends CarInsurance {
 
   updatePrice() {
     for (let i = 0; i < this.products.length; i++) {
-      this.products[i].price === 1 ?
-      this.decreasePrice(i, 1) : this.products[i].price
+      this.products[i].price === 1 ? this.decreasePrice(i, 1) : this.products[i].price
       this.sellInEvaluator(i)
       this.products[i].sellIn --
     }
