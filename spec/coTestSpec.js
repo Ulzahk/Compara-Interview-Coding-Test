@@ -51,14 +51,12 @@ describe('Co Tests', () => {
       const products = coTest.updatePrice()
       assert.equal(products[0].price, 50)
     })
-
     it('Should return a price equal to 50 when price is 50', () => {
       const coTest = new FullCoverage([ new Product('Full Coverage', 0, 50) ])
       const products = coTest.updatePrice()
       assert.equal(products[0].price, 50)
     })
   })
-
   describe('MegaCoverage Subclass', () => {
     it('Should return an array with a length of 0', () => {
       const coTest = new MegaCoverage()
@@ -70,7 +68,6 @@ describe('Co Tests', () => {
       assert.equal(products[0].price, 80)
     })
   })
-
   describe('SpecialFullCoverage Subclass', () => {
     it('Should return an array with a length of 0', () => {
       const coTest = new SpecialFullCoverage()
@@ -112,7 +109,6 @@ describe('Co Tests', () => {
       assert.equal(products[0].price, 0)
     })
   })
-
   describe('SuperSale Subclass', () => {
     it('Should return an array with a length of 0', () => {
       const coTest = new SuperSale()
@@ -145,4 +141,3 @@ describe('Co Tests', () => {
     })
   })
 })
-
