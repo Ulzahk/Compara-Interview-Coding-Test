@@ -6,7 +6,7 @@
   "scripts": {
     "mocha": "mocha spec/*.js",
     "test": "nyc npm run mocha",
-    "test-browser": "nyc --reporter=lcov npm run test & start coverage/lcov-report/index.html",
+    "test-windows-browser": "nyc --reporter=lcov npm run test & start coverage/lcov-report/index.html",
     "after-30-days": "node src/index.js"
   },
   "repository": {
