@@ -16,7 +16,8 @@ class CarInsurance {
         if(this.products[i].sellIn > 0) {
             this.products[i].price --
         } else {
-          this.products[i].price -= 2
+          this.products[i].price === 1 ?
+          this.products[i].price -- : this.products[i].price -= 2
         }
       }
       this.products[i].sellIn --
@@ -36,7 +37,8 @@ class FullCoverage extends CarInsurance {
         if(this.products[i].sellIn > 0) {
             this.products[i].price ++
         } else {
-          this.products[i].price += 2
+          this.products[i].price === 49 ?
+          this.products[i].price ++ : this.products[i].price += 2
         }
       }
       this.products[i].sellIn --
@@ -94,7 +96,9 @@ class SuperSale extends CarInsurance {
         if(this.products[i].sellIn > 0) {
           this.products[i].price -= 2
         } else {
-          this.products[i].price -= 4
+          this.products[i].price === 2 ?
+          this.products[i].price -= 2 : this.products[i].price === 3 ?
+          this.products[i].price -= 3 : this.products[i].price -= 4
         }
       }
       this.products[i].sellIn --

@@ -3,6 +3,7 @@ const { Product, CarInsurance, FullCoverage, MegaCoverage, SpecialFullCoverage, 
 const productsAtDayZero = [
   new Product('Medium Coverage', 10, 20),
   new Product('Low Coverage', 5, 7),
+  new Product('Medium Coverage', -5, 1),
 ];
 
 const productsAtDayZeroFullCoverage = [
@@ -20,7 +21,7 @@ const productsAtDayZeroSpecialFullCoverage = [
   new Product('Special Full Coverage', 5, 49),
 ]
 
-const productsAtDayZeroSuperSalce = [
+const productsAtDayZeroSuperSale = [
   new Product('Super Sale', 3, 6),
 ]
 
@@ -28,7 +29,7 @@ const carInsurance = new CarInsurance(productsAtDayZero)
 const fullCoverage = new FullCoverage(productsAtDayZeroFullCoverage)
 const megaCoverage = new MegaCoverage(productsAtDayZeroMegaCoverage)
 const specialFullCoverage = new SpecialFullCoverage(productsAtDayZeroSpecialFullCoverage)
-const superSale = new SuperSale(productsAtDayZeroSuperSalce)
+const superSale = new SuperSale(productsAtDayZeroSuperSale)
 
 const productPrinter = (product) => {
   console.log(`${product.name}, ${product.sellIn}, ${product.price}`)
