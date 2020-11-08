@@ -3,7 +3,6 @@ const { Product, CarInsurance, FullCoverage, MegaCoverage, SpecialFullCoverage, 
 const productsAtDayZero = [
   new Product('Medium Coverage', 10, 20),
   new Product('Low Coverage', 5, 7),
-  new Product('Medium Coverage', -5, 1),
 ];
 
 const productsAtDayZeroFullCoverage = [
